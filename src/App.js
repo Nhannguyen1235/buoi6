@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import NotFound from "./components/notFound/NotFound";
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div>
       <AppProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route index element={<Home />} />
             <Route path="/products" element={<Products />} />
@@ -20,7 +20,7 @@ export default function App() {
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </AppProvider>
     </div>
   );
