@@ -5,7 +5,7 @@ import { Container, Row } from 'reactstrap';
 export default function Products() {
   const [data,setData]=useState([])
 useEffect(()=>{
-  fetchData();
+  fetchData()
 },[])
 const url="https://66a07af87053166bcabb8822.mockapi.io/student"
 const fetchData =()=>{
